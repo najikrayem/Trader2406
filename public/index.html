@@ -1,0 +1,399 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="page-body" class="body">
+
+    <div id="notif-overlay" class="notif-overlay" style="display: none;">
+        <div id="notif-overboxlay" class="notif-box">
+            <button id="exit-X" class="exit-X"><b>X</b></button>
+            <h1 id="notif-title" class="notif-title"></h1>
+            <p id="notif-message" class="notif-message"></p>
+        </div>
+    </div>
+
+    <h1 class="logo">Trader2406</h1>
+
+    <section id="home-section" class="home-section">
+        <p class="paragraph">
+            <br>Number one stonk trading platform:‍<br><br>       - Guaranteed Bankruptcy‍<br><br>       - State-of-the Art security not used‍<br><br>       - Guaranteed 1% up-time‍<br><br>       - 100% Fake!
+            <br><br><br>YOU CAN"T GO WRONG WITH PICKING US!
+        </p>
+        <div id="sign-in-box" class="form-box">
+            <h2 class="h2">Sign In:</h2>
+            <form id="sign-in-form" class="form">
+                <label class="form-label" for="sign-in-email">Email:</label>
+
+                <input id="sign-in-email" type="email" class="form-field" required>
+
+                <label class="form-label" for="sign-in-password">Password:</label>
+
+                <input id="sign-in-password" type="password" class="form-field" required>
+
+                <input type="submit" class="button" value="Log In">
+            </form>
+            <a id="sign-up-link" class="link" href="">Sign Up</a>
+        </div>
+
+        <div id="sign-up-box" class="form-box" style="display: none;">
+            <h2 class="h2">Sign Up:</h2>
+            <form id="sign-up-form" class="form">
+                <label class="form-label" for="sign-up-email">Email:</label>
+
+                <input id="sign-up-email" type="email" class="form-field" required>
+
+                <label class="form-label" for="sign-up-password">Password:</label>
+
+                <input id="sign-up-password" type="password" class="form-field" required>
+
+                <input type="submit" class="button" value="Sign Up">
+            </form>
+            <a id="sign-in-link" class="link" href="">Already have an account? Sign In</a>
+        </div>
+
+    </section>
+
+    <section id="date-and-logout-section" class="date-and-logout-section" style="display: none;">
+        <p class="paragraph">
+            <b>DATE:</b> 12/65/2013
+        </p>
+        <p class="paragraph">
+            <b>MARKET:</b> OPEN
+        </p>
+        <button id="log-out-btn" class="button">Log Out</button>
+    </section>
+
+    <section id="search-section" class="search-section" style="display: none;">
+        <p id="welcome-message" class="paragraph" style="margin: 0px;">Welcome </p>
+        <div style="display: flex; position: relative;">
+            <img id="watchlists-star" src="grade-24px.svg" style="width: 20px; height: 20px;" alt="">
+            <a id="watchlists-link" class="link" href="">Watchlists</a>
+            <div id="watchlists-popup-menu" class="watchlists-popup-menu" style="display: none; z-index: 900;">
+                <button id="exit-watchlists-popup-menu" class="exit-X">X</button>
+                <form id="popup-watchlist-dropdown-form">
+                    <label for="popup-watchlist-dropdown" class="form-label">Select a watchlist:</label>
+                    <select id="popup-watchlist-dropdown" class="form-select"></select>
+                </form>
+                <div id="watchlist-popup-row-container" style="margin-bottom: 15px;"></div>
+                <a id="manage-watchlists-link" class="link" href="">MANAGE WATCHLISTS</a>
+            </div>
+        </div>
+        <form id="search-form" style="display: flex; align-items: center; margin: 0px;  position: relative;">
+            <input id="search-input" type="text" class="form-field" style="margin: 0px;" placeholder="Search For Stock Symbols..." autocomplete="off">
+            <img src="search-24px.svg" style="width: 30px; height: 30px; margin-left: 15px; margin-right: 25px;" alt="">
+            <div id="search-results-menu" class="search-results-menu" style="display: none; z-index: 900;">
+            </div>
+        </form>
+    </section>
+
+    <section id="nav-bar" class="nav-bar" style="display: none;">
+        <button id="my-portfolio" class="nav-bar-element">My Portfolio</button>
+        <button id="place-order" class="nav-bar-element">Place Order</button>
+        <button id="my-orders" class="nav-bar-element">My Orders</button>
+        <button id="activity" class="nav-bar-element">Activity</button>
+        <button id="fund-withdraw" class="nav-bar-element">Fund/Withdraw</button>
+        <button id="set-alarm" class="nav-bar-element">My Alarms</button>
+    </section>
+
+    <section id="my-portfolio-section" class="info-section" style="display: none;">
+        <h1 class="h1"><b>Summary:</b></h1>
+        <div class="summary-columns">
+            <div class="summary-column">
+                <p class="paragraph"><b>Unrealized Gain/Loss:</b></p>
+                <p id="total-unrealized-gain-loss" class="paragraph">$21,356</p>
+            </div>
+            <div class="summary-column">
+                <p class="paragraph"><b>Combined Book Cost:</b></p>
+                <p id="combined-book-cost" class="paragraph">$21,356</p>
+            </div>
+            <div class="summary-column">
+                <p class="paragraph"><b>Combined Total:</b></p>
+                <p id="combined-total" class="paragraph">$21,356</p>
+            </div>
+        </div>
+
+        <div class="summary-row">
+            <p class="paragraph"><b>Currency</b></p>
+            <p class="paragraph"><b>Cash</b></p>
+            <p class="paragraph"><b>Investments</b></p>
+            <p class="paragraph"><b>Total</b></p>
+        </div>
+
+        <div class="summary-row">
+            <p class="paragraph">DaveBucks</p>
+            <p id="cash" class="paragraph">$21,356</p>
+            <p id="investments" class="paragraph">$21,356</p>
+            <p id="total" class="paragraph">$21,356</p>
+        </div>
+
+        <h1 class="h1"><b>Holdings:</b></h1>
+
+        <div class="summary-row">
+            <p class="paragraph"><b>Symbol:</b></p>
+            <p class="paragraph"><b>Quantity:</b></p>
+            <p class="paragraph"><b>Book Cost:</b></p>
+            <p class="paragraph"><b>Market Value:</b></p>
+            <p class="paragraph"><b>Avg.</b></p>
+            <p class="paragraph"><b>Unrealized Gain/Loss</b></p>
+        </div>
+        <div id="holding-rows-container"></div>
+        <!--
+            <div class="holding-row">
+                <p class="link">NVAX</p>
+                <p class="paragraph">1500</p>
+                <p class="paragraph">$1,560</p>
+                <p class="paragraph">$356,060</p>
+                <p class="paragraph">$1.04</p>
+                <p class="paragraph">$345,500</p>
+            </div>
+            <div class="holding-row even-holding-row">
+                <p class="link">NVAX</p>
+                <p class="paragraph">1500</p>
+                <p class="paragraph">$1,560</p>
+                <p class="paragraph">$356,060</p>
+                <p class="paragraph">$1.04</p>
+                <p class="paragraph">$345,500</p>
+            </div>
+            <div class="holding-row">
+                <p class="link">NVAX</p>
+                <p class="paragraph">1500</p>
+                <p class="paragraph">$1,560</p>
+                <p class="paragraph">$356,060</p>
+                <p class="paragraph">$1.04</p>
+                <p class="paragraph">$345,500</p>
+            </div>
+            <div class="holding-row even-holding-row">
+                <p class="link">NVAX</p>
+                <p class="paragraph">1500</p>
+                <p class="paragraph">$1,560</p>
+                <p class="paragraph">$356,060</p>
+                <p class="paragraph">$1.04</p>
+                <p class="paragraph">$345,500</p>
+            </div>
+            <div class="holding-row">
+                <p class="link">NVAX</p>
+                <p class="paragraph">1500</p>
+                <p class="paragraph">$1,560</p>
+                <p class="paragraph">$356,060</p>
+                <p class="paragraph">$1.04</p>
+                <p class="paragraph">$345,500</p>
+            </div>
+            <div class="holding-row even-holding-row">
+                <p class="link">NVAX</p>
+                <p class="paragraph">1500</p>
+                <p class="paragraph">$1,560</p>
+                <p class="paragraph">$356,060</p>
+                <p class="paragraph">$1.04</p>
+                <p class="paragraph">$345,500</p>
+            </div>
+            -->
+    </section>
+
+    <section id="fund-withdraw-section" class="info-section" style="display: none;">
+        <h1 class="h1"><b>Fund/Withdraw Cash:</b></h1>
+        <p id="fW-cash-amount" class="paragraph"><b>Total Available Cash in Account: </b>$0</p>
+        <form id="fund-withdraw-form" class="form">
+            <label class="form-label" for="cash-amount">Amount:</label>
+
+            <input id="cash-amount" type="number" class="form-field" required>
+
+            <select id="operation" class="form-select">
+                <option value="Fund">Fund</option>
+                <option value="Withdraw">Withdraw</option>
+            </select>
+
+            <input type="submit" class="button" value="Submit">
+        </form>
+        </div>
+    </section>
+
+    <section id="place-order-section" class="info-section" style="display: none;">
+        <h1 class="h1"><b>Place Order:</b></h1>
+        <form id="place-order-form" class="form">
+
+            <select id="order-operation" class="form-select">
+                <option value="Buy">Buy</option>
+                <option value="Sell">Sell</option>
+            </select>
+
+            <label class="form-label">Stock Symbol:</label>
+            <input id="stock-symbol" type="text" class="form-field" required>
+
+            <label class="form-label">Quantity:</label>
+            <input id="stock-quantity" type="number" class="form-field" required>
+
+            <label class="form-label">Max/Min Price(optional):</label>
+            <input id="max-min-price" type="number" class="form-field">
+
+            <label class="form-label">Good Through (Enter how many days, or zero if you want the order to expire
+                today):</label>
+            <input id="good-through" type="number" class="form-field" required>
+
+            <input type="submit" class="button" value="Place Order">
+        </form>
+    </section>
+
+    <section class="info-section" style="display: none;">
+        <h1 class="h1"><b>Buy:</b></h1>
+        <form class="form">
+            <label class="form-label">Stock Symbol:</label>
+            <input type="text" class="form-field">
+
+            <label class="form-label">Quantity:</label>
+            <input type="text" class="form-field">
+
+            <label class="form-label">Max Price(optional):</label>
+            <input type="text" class="form-field">
+
+            <label class="form-label">Good Through (Enter how many days, or zero if you want the order to expire
+                today):</label>
+            <input type="text" class="form-field">
+
+            <input type="submit" class="button" value="Place Order">
+        </form>
+
+        <h1 class="h1"><b>Sell:</b></h1>
+
+        <form class="form">
+            <label class="form-label">Stock Symbol:</label>
+            <input type="text" class="form-field">
+
+            <label class="form-label">Quantity:</label>
+            <input type="text" class="form-field">
+
+            <label class="form-label">Min Price(optional):</label>
+            <input type="text" class="form-field">
+
+            <label class="form-label">Good Through (Enter how many days, or zero if you want the order to expire
+                today):</label>
+            <input type="text" class="form-field">
+
+            <input type="submit" class="button" value="Place Order">
+        </form>
+    </section>
+
+    <section id="my-orders-section" class="info-section" style="display: none;">
+        <h1 class="h1">My Orders:</h1>
+        <h3 class="h3">Pending:</h3>
+        <div id="pending-orders-container">
+            <div class="holding-row">
+                <p class="paragraph"><b>Order: </b>Buy</p>
+                <p class="paragraph"><b>Symbol: </b>FTS</p>
+                <p class="paragraph"><b>Quantity: </b>15</p>
+                <p class="paragraph"><b>Limit Price: </b>50</p>
+                <p class="paragraph"><b>Status: </b>Pending</p>
+                <button class="bin-button"></button>
+            </div>
+        </div>
+        <h3 class="h3">Processed:</h3>
+        <div id="processed-orders-container">
+            <div class="holding-row">
+                <p class="paragraph"><b>Order: </b>Buy</p>
+                <p class="paragraph"><b>Symbol: </b>FTS</p>
+                <p class="paragraph"><b>Quantity: </b>15</p>
+                <p class="paragraph"><b>Limit Price: </b>50</p>
+                <p class="paragraph"><b>Status: </b>Expired</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="activity-section" class="info-section" style="display: none;">
+
+
+        <h1 class="h1">Activity: </h1>
+        <!--
+        <h3 class="h3">Recent Activity:</h3>
+        <div id="recent-activity-container">
+            <div class="holding-row">
+                <p class="paragraph"><b>Activity: </b>Placed Purchase Order</p>
+                <p class="paragraph"><b>Date: </b>5</p>
+            </div>
+        </div>
+        <h3 class="h3">Recent Activity:</h3>-->
+        <form id="activity-audit-form">
+            <label class="form-label" for="select-activity">Activity Type:</label>
+            <select name="select-activity" id="select-activity" class="form-select">
+                <option value="buy-order-activity">Buy Orders</option>
+                <option value="sell-order-activity">Sell Orders</option>
+                <option value="funds-activity">Fundings</option>
+                <option value="withdrawals-activity">Withdrawals</option>
+            </select>
+            <input type="submit" value="Retrieve Activity" class="button">
+        </form>
+        <div id="custom-activity-container">
+            <div class="holding-row">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="stock-info-section" class="info-section" style="display: none;">
+        <h1 class="h1">Stock Details:</h1>
+        <div class="cols-container">
+            <div class="left-col">
+                <h3 id="stock-title-name" class="h3" style="border-bottom: 1px solid #0df5e3;">FTS</h3>
+                <div class="cols-container">
+                    <div class="left-col">
+                        <p class="paragraph"><b>Open: </b></p>
+                        <p class="paragraph"><b>Bid/Size: </b></p>
+                        <p class="paragraph"><b>Ask/Size: </b></p>
+                        <p class="paragraph"><b>Previous Close: </b></p>
+                        <p class="paragraph"><b>Day Volume: </b></p>
+                        <p class="paragraph"><b>Day High: </b></p>
+                        <p class="paragraph"><b>Day Low: </b></p>
+                    </div>
+                    <div class="right-col">
+                        <p id="stock-info-open" class="paragraph"></p>
+                        <p id="stock-info-bid" class="paragraph"></p>
+                        <p id="stock-info-ask" class="paragraph"></p>
+                        <p id="stock-info-close" class="paragraph"></p>
+                        <p id="stock-info-volume" class="paragraph"></p>
+                        <p id="stock-info-high" class="paragraph"></p>
+                        <p id="stock-info-low" class="paragraph"></p>
+                    </div>
+                </div>
+                <form id="historical-data-form">
+                    <label class="form-label" for="h-d-num-days">Request historical data. Enter number of days:</label>
+                    <input id="h-d-num-days" type="text" class="form-field" placeholder="5">
+                    <input type="submit" class="button" value="Request History">
+                </form>
+                <div id="histoy-container"></div>
+            </div>
+            <div class="right-col">
+                <h3 id="stock-title-price" class="h3" style="border-bottom: 1px solid #0df5e3;">$53.61</h3>
+                <form id="add-to-watchlist-form">
+                    <select class="form-select" name="add-to-watchlist-select" id="add-to-watchlist-select" required>
+                    </select>
+                    <input type="submit" class="button" value="Add to Watchlist">
+                </form>
+                <form id="alarm-form">
+                    <label for="" class="form-label">Set up alarm for when the price moves above/below current price by:</label>
+                    <input id="form-change-percentage" type="number" class="form-field" placeholder="%" required>
+                    <input type="submit" class="button" value="Set Alarm">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="my-alarms-section" class="info-section" style="display: none;">
+        <h1 class="h1">My Alarms:</h1>
+        <h3 class="h3">Active Alarms:</h3>
+        <div id="active-alarms-container"></div>
+        <h3 class="h3">Disabled Alarms:</h3>
+        <div id="disabled-alarms-container"></div>
+        <h1 class="h1">Manage Watchlists:</h1>
+        <form id="new-watchlist-form">
+            <label class="form-label" for="new-watch-list-name">Create New Watchlist:</label>
+            <input class="form-field" id="new-watch-list-name" type="text" required>
+            <input type="submit" class="button" value="Create Watchlist">
+        </form>
+        <div id="manager-watchlists-container"></div>
+    </section>
+
+
+    <script src="view.js"></script>
+</body>
+
+</html>

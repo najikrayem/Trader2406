@@ -1,0 +1,19 @@
+{
+    "name": "trader2406",
+    "version": "1.0.0",
+    "description": "Mock Trading Platform",
+    "main": "backend.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "author": "Naji Krayem",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "uuid": "^8.3.1"
+    }
+}
